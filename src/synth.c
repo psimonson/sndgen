@@ -12,7 +12,7 @@ static float generate_waveform(Waveform waveform, float phase) {
         case WAVE_SQUARE:
             return phase < M_PI ? 1.0f : -1.0f;
         case WAVE_TRIANGLE:
-            return 2.0f * fabsf(2.0f * (phase / TWO_PI) - 1.0f) - 1.0f;
+            return 2.0f * fabs(2.0f * (phase / TWO_PI) - 1.0f) - 1.0f;
         case WAVE_SAWTOOTH:
             return 2.0f * (phase / TWO_PI) - 1.0f;
         default:
